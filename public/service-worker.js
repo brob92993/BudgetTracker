@@ -1,12 +1,14 @@
 const FILES_TO_CACHE = [
 "/",
-"/index.html",
-"/style.css",
-"/db.js",
-"/icons/icon-192x192.png",
-"/icons/icon-512x512.png",
-"/manifest.webmanifest",
-"/index.js",
+"index.html",
+"index.js",
+"manifest.webmanifest",
+"styles.css",
+"db.js",
+"icons/icon-192x192.png",
+"icons/icon-512x512.png",
+"https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css",
+"https://cdn.jsdelivr.net/npm/chart.js@2.8.0",
 ];
 
 const CACHE_NAME = "static-cache-v2";
@@ -18,11 +20,13 @@ self.addEventListener("install", function (evt) {
         caches.open(CACHE_NAME).then(cache => {
             console.log("Your files have been pre-cached successfully!");
             return cache.addAll(FILES_TO_CACHE);
+            
         })
     );
     self.skipWaiting();
+    console.log("finished installing!")
 });
-
+ 
 
 //activate
 self.addEventListener("activate", function (evt) {
@@ -57,8 +61,9 @@ self.addEventListener("fetch", function (evt) {
                         return response;
                     })
                     .catch(err => {
+                        console.log(err);
                         return cache.match(evt.request);
-                    });
+                  });
             })
         );
         return;
