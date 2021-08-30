@@ -6,8 +6,7 @@ const FILES_TO_CACHE = [
 "/icons/icon-512x512.png",
 "/index.js",
 "./models/transaction.js",
-"./routes/api.js",
-"/manifest.webmanifest"
+"./routes/api.js"
 
 ];
 

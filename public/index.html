@@ -46,15 +46,16 @@
 
   <script type="text/javascript">
     (function() {
-      if("serviceWorker" in navigator) {
-        navigator.serviceWorker.register("./service-worker.js", {
-          scope: "/"
-        })
-          .then((res) => {
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker
+          .register("./service-worker.js")
+          .then(res => {
             console.log(res);
             console.log("Service Worker registered successfully.");
           })
-          .catch(error => console.log("Service Worker registration failed:", error));
+          .catch(error =>
+            console.log("Service Worker registration failed:", error)
+          );
       }
     })();
   </script>
