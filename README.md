@@ -20,8 +20,7 @@ An application that allows the user to add expenses and deposits to their budget
   
   To install necessary dependencies, run the following command: "npm i".
 
-  To run the server in the CLI: "node server.js".
-  
+  To seed the database in the CLI run the following command: "npm run seed"
   
   ## Usage
 
