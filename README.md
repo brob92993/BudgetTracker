@@ -20,15 +20,22 @@ An application that allows the user to add expenses and deposits to their budget
   
   To install necessary dependencies, run the following command: "npm i".
 
+  ![Npm](img/runseed.PNG)
+
   To seed the database in the CLI run the following command: "npm run seed"
   
   ## Usage
 
+To start the app in the CLI : "npm start"  
+
+![NpmStart](img/npmstart.PNG)
 
 
-  ![CreateSchema]
+The video below is a demo on the online and offline usage for the application
 
-To start the app in the CLI : "npm start"
+![Walkthrough](img/BudgetWalkthrough.gif)
+
+
   
 
   ## License
